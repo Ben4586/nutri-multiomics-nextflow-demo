@@ -1,0 +1,99 @@
+Mar-30 17:19:59.864 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf
+Mar-30 17:19:59.990 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.4
+Mar-30 17:20:00.028 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/benteh/.nextflow/plugins; core-plugins: nf-amazon@3.4.4,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.5,nf-k8s@1.2.2,nf-tower@1.17.5,nf-wave@1.16.1
+Mar-30 17:20:00.059 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-30 17:20:00.060 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-30 17:20:00.064 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Mar-30 17:20:00.084 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Mar-30 17:20:00.285 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-30 17:20:00.333 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/benteh/nutri-multiomics-nextflow-demo/nextflow.config
+Mar-30 17:20:00.338 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/benteh/nutri-multiomics-nextflow-demo/nextflow.config
+Mar-30 17:20:00.385 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Mar-30 17:20:01.005 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-30 17:20:01.005 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-30 17:20:01.025 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/benteh/.nextflow/secrets/store.json
+Mar-30 17:20:01.029 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7f6874f2] - activable => nextflow.secret.LocalSecretsProvider@7f6874f2
+Mar-30 17:20:01.045 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Mar-30 17:20:01.067 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [maniac_bernard] DSL2 - revision: ba7be64518
+Mar-30 17:20:01.157 [main] DEBUG nextflow.Session - Session UUID: e40a410c-7a92-4eff-a046-938a3e82c11c
+Mar-30 17:20:01.158 [main] DEBUG nextflow.Session - Run name: maniac_bernard
+Mar-30 17:20:01.158 [main] DEBUG nextflow.Session - Executor pool size: 8
+Mar-30 17:20:01.174 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Mar-30 17:20:01.184 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Mar-30 17:20:01.209 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.4 build 11173
+  Created: 10-02-2026 15:17 UTC (23:17 SGST)
+  System: Linux 6.6.87.2-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 17.0.18+8-Ubuntu-124.04.1
+  Encoding: UTF-8 (UTF-8)
+  Process: 18815@DESKTOP-G55HI3C [127.0.1.1]
+  CPUs: 8 - Mem: 7.6 GB (5.5 GB) - Swap: 2 GB (2 GB)
+Mar-30 17:20:01.243 [main] DEBUG nextflow.Session - Work-dir: /home/benteh/nutri-multiomics-nextflow-demo/work [ext2/ext3]
+Mar-30 17:20:01.244 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/benteh/nutri-multiomics-nextflow-demo/bin
+Mar-30 17:20:01.258 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-30 17:20:01.272 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Mar-30 17:20:01.278 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Mar-30 17:20:01.346 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-30 17:20:01.360 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Mar-30 17:20:01.472 [main] DEBUG nextflow.Session - Session start
+Mar-30 17:20:01.739 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-30 17:20:01.952 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Mar-30 17:20:01.953 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-30 17:20:01.969 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-30 17:20:01.977 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=7.6 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Mar-30 17:20:01.981 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-30 17:20:02.017 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'INTEGRATE': maxForks=0; fair=false; array=0
+Mar-30 17:20:02.091 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Mar-30 17:20:02.092 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-30 17:20:02.093 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MODEL': maxForks=0; fair=false; array=0
+Mar-30 17:20:02.097 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: INTEGRATE, MODEL
+Mar-30 17:20:02.101 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Mar-30 17:20:02.110 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > INTEGRATE
+Mar-30 17:20:02.112 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MODEL
+Mar-30 17:20:02.113 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_612c1df02ad3d7d1: /home/benteh/nutri-multiomics-nextflow-demo/main.nf
+Mar-30 17:20:02.114 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Mar-30 17:20:02.114 [main] DEBUG nextflow.Session - Session await
+Mar-30 17:20:02.238 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=INTEGRATE (1); work-dir=null
+  error [nextflow.exception.ProcessUnrecoverableException]: Process `INTEGRATE (1)` script contains error(s)
+Mar-30 17:20:02.278 [Actor Thread 4] ERROR nextflow.processor.TaskProcessor - Error executing process > 'INTEGRATE (1)'
+
+Caused by:
+  No such variable: nutri -- Check script 'main.nf' at line: 13
+
+
+Source block:
+  """
+  python $nutri-multiomics-nextflow-demo/scripts/integrate.py \
+      --micro $micro \
+      --meta $meta \
+      --clinical $clinical \
+      --output integrated.csv
+  """
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Mar-30 17:20:02.285 [Actor Thread 4] DEBUG nextflow.Session - Session aborted -- Cause: Process `INTEGRATE (1)` script contains error(s)
+Mar-30 17:20:02.291 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Mar-30 17:20:02.328 [Actor Thread 4] DEBUG nextflow.Session - The following nodes are still active:
+[process] INTEGRATE
+  status=ACTIVE
+  port 0: (queue) closed; channel: micro
+  port 1: (queue) OPEN  ; channel: meta
+  port 2: (queue) OPEN  ; channel: clinical
+  port 3: (cntrl) -     ; channel: $
+
+[process] MODEL
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: integrated
+  port 1: (cntrl) -     ; channel: $
+
+Mar-30 17:20:02.347 [Actor Thread 4] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Mar-30 17:20:02.521 [main] DEBUG nextflow.Session - Session await > all processes finished
+Mar-30 17:20:02.521 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-30 17:20:02.522 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Mar-30 17:20:02.524 [Actor Thread 1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=INTEGRATE; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Mar-30 17:20:02.533 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Mar-30 17:20:02.564 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
