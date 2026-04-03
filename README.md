@@ -26,6 +26,7 @@ Microbiome + Metabolomics + Clinical Data
 → Predictive Modeling  
 → Feature Importance  
 → Causal Interpretation  
+→ Mechanistic Modeling 
 
 ---
 
@@ -63,8 +64,32 @@ nextflow run main.nf
 
 ---
 
-## 📌 Future Work
+## 🧠 Mechanistic Modeling
 
-- Add mechanistic modeling (ODE / metabolic networks)
-- Integrate real microbiome datasets
-- Expand to multi-cohort analysis
+This pipeline integrates multiple modeling approaches to complement machine learning:
+
+### 🔬 Constraint-Based Modeling (COBRA)
+- Flux Balance Analysis (FBA) using COBRApy
+- Simulates metabolic flux distributions
+- Identifies key metabolic pathways
+
+### 🤖 Agent-Based Modeling
+- Simulates microbial population dynamics
+- Captures interactions and emergent behavior
+
+---
+
+## 📊 Additional Outputs
+
+- `cobra_fluxes.csv`: Full metabolic flux distribution   
+- `ode_simulation.csv`: Simulated glucose dynamics  
+- `abm_simulation.csv`: Microbial population trends  
+
+---
+
+## 🔗 Key Insight
+
+Combining machine learning with mechanistic modeling enables:
+- Better biological interpretability  
+- Hypothesis generation  
+- Improved translation from data to nutritional insights  

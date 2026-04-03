@@ -35,12 +35,40 @@ process MODEL {
     """
 }
 
+process COBRA_MODEL {
+    publishDir "results/", mode: 'copy'
+
+    output:
+    path "cobra_fluxes.csv"
+
+    script:
+    """
+    python ${projectDir}/scripts/cobra_simulation.py
+    """
+}
+
+process ABM_MODEL {
+    publishDir "results/", mode: 'copy'
+
+    output:
+    path "abm_simulation.csv"
+
+    script:
+    """
+    python ${projectDir}/scripts/agent_based_model.py
+    """
+}
+
 workflow {
     micro = Channel.fromPath(params.microbiome)
     meta = Channel.fromPath(params.metabolomics)
     clinical = Channel.fromPath(params.clinical)
 
-    INTEGRATE(micro, meta, clinical)
+    integrated = INTEGRATE(micro, meta, clinical)
 
-    MODEL(INTEGRATE.out)
+    model_out = MODEL(integrated)
+
+    // NEW modeling layers
+    COBRA_MODEL()
+    ABM_MODEL()
 }
