@@ -87,6 +87,9 @@ This pipeline integrates multiple modeling approaches to complement machine lear
 
 ---
 
+👤 Author
+Beng Soon Teh Computational Biology / Bioinformatics
+
 ## 🔗 Key Insight
 
 Combining machine learning with mechanistic modeling enables:
